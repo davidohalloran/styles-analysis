@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import type { ColorInfo } from '@shared'
 
 defineProps<{ color: ColorInfo }>()
