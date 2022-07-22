@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { defineProps, defineEmit } from 'vue'
 
-const emit = defineEmit()
+const emit = defineEmits()
 const props = defineProps<{
   modelValue: string
   items: { value: string; display?: string }[]

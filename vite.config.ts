@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import Pages from 'vite-plugin-pages'
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 
 export default defineConfig({
@@ -22,12 +21,8 @@ export default defineConfig({
     }),
     ViteComponents({
       customComponentResolvers: [
-        ViteIconsResolver({
-          componentPrefix: '',
-        }),
       ],
     }),
-    ViteIcons(),
   ],
   build: {
     outDir: 'dist/app',
@@ -40,9 +35,6 @@ export default defineConfig({
       '@vueuse/router',
       'fuse.js',
       'prismjs',
-    ],
-    exclude: [
-      'vue-demi',
-    ],
+    ]
   },
 })

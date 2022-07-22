@@ -15,7 +15,6 @@ const filepath = computed(() => props.path.startsWith(root.value) ? props.path.s
 
 <template>
   <div class="py-2 px-3 -mx-3 text-sm">
-    <FileIcon :type="getFileExt(filepath)" />
     <span class="ml-2 opacity-50">{{ filepath }}</span>
     <slot />
   </div>
